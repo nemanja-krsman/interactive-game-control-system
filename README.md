@@ -105,22 +105,34 @@ enforces a time limit during a game stage.
 
 ### System algorithm
 
-```text
-Initialize input, timer/display, and output controllers
-Repeat:
-    Wait for the start-button event (1)
-    Reset and start the elapsed-time display
-    Wait for sensor 1 (2), then activate Motor 1
-    Wait for sensor 2 (6), then run randomized pneumatic outputs
-        If the stage time limit expires, switch the pneumatic outputs off
-    Wait for sensor 3 (4), then activate Motor 2
-    Wait for the end-button event (5), then finish the round
-    Stop the timer and switch controlled outputs off
+```mermaid
+flowchart TD
+    A([Power on]) --> B[Initialize input, timer/display, and output controllers]
+    B --> C{Start button event 1?}
+    C -- No --> C
+    C -- Yes --> D[Reset and start elapsed-time display]
+    D --> E{Sensor 1 event 2?}
+    E -- No --> E
+    E -- Yes --> F[Activate Motor 1]
+    F --> G{Sensor 2 event 6?}
+    G -- No --> G
+    G -- Yes --> H[Stop Motor 1]
+    H --> I[Pulse randomized pneumatic outputs]
+    I --> J{Sensor 3 event 4<br/>or stage time limit?}
+    J -- No --> I
+    J -- Yes --> K[Switch pneumatic outputs off]
+    K --> L{Sensor 3 event 4?}
+    L -- No --> L
+    L -- Yes --> M[Activate Motor 2]
+    M --> N{End button event 5?}
+    N -- No --> N
+    N -- Yes --> O[Stop timer and controlled outputs]
+    O --> C
 ```
 
-This is the intended high-level flow represented by the current firmware.
-Individual controllers handle their own part of the sequence; see their guides
-for implementation details.
+This is the high-level game flow represented by the firmware. Individual
+controllers handle their own part of the sequence; see their guides for
+implementation details.
 
 For details about each firmware unit, see the dedicated guides:
 

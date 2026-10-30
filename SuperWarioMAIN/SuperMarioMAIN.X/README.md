@@ -35,15 +35,19 @@ The output-controller firmware also consumes game events. See its
 
 ## Algorithm
 
-```text
-Initialize UART and display interface
-Keep the timer stopped and show the current time
-Repeat:
-    Wait for event 1
-    Reset elapsed-time counters and start the timer
-    While the timer runs:
-        Update the display from the timer counters
-        When event 5 arrives, stop the timer
+```mermaid
+flowchart TD
+    A([Power on]) --> B[Initialize UART and display interface]
+    B --> C[Show current time<br/>keep timer stopped]
+    C --> D{Receive start event 1?}
+    D -- No --> D
+    D -- Yes --> E[Reset elapsed-time counters]
+    E --> F[Start timer]
+    F --> G[Timer interrupt updates counters<br/>and refreshes display]
+    G --> H{Receive end event 5?}
+    H -- No --> G
+    H -- Yes --> I[Stop timer]
+    I --> C
 ```
 
 Timer interrupts maintain the time counters and refresh the displayed digits.

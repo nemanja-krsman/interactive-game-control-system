@@ -21,16 +21,19 @@ the connected hardware and the receiving firmware.
 
 ## Algorithm
 
-```text
-Configure inputs 1–6 and initialize UART
-Wait briefly for startup
-Repeat:
-    Scan each enabled input
-    For each input that is active low and was not already held:
-        Mark the input event
-        Wait 200 ms
-    Send every marked input number as ASCII followed by CR/LF
-    Clear the event buffer
+```mermaid
+flowchart TD
+    A([Power on]) --> B[Configure inputs 1–6 and initialize UART]
+    B --> C[Wait 3 seconds]
+    C --> D[Scan enabled inputs]
+    D --> E{Input active low<br/>and not already held?}
+    E -- Yes --> F[Mark input event<br/>wait 200 ms]
+    E -- No --> G{More inputs to scan?}
+    F --> G
+    G -- Yes --> D
+    G -- No --> H[Transmit marked input numbers<br/>as ASCII + CR/LF]
+    H --> I[Clear event buffer]
+    I --> D
 ```
 
 Per-input flags prevent a held button or sensor from sending the same event on

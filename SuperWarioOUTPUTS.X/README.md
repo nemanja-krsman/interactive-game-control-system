@@ -21,19 +21,29 @@ physical sensor assignment is installation-specific.
 
 ## Algorithm
 
-```text
-Initialize outputs to OFF and initialize UART and timer
-Repeat:
-    Wait for start event 1; reset the stage timer
-    Wait for sensor event 2; activate Motor 1
-    Wait for sensor event 6; deactivate Motor 1
-    Until sensor event 4 or the stage time limit:
-        Select pneumatic output channels
-        Pulse the selected outputs, then leave them OFF between pulses
-    Ensure pneumatic outputs are OFF
-    Wait for sensor event 4; activate Motor 2
-    Wait for end event 5
-    Deactivate motor outputs and finish the round
+```mermaid
+flowchart TD
+    A([Power on]) --> B[Set outputs OFF<br/>initialize UART and timer]
+    B --> C{Receive start event 1?}
+    C -- No --> C
+    C -- Yes --> D[Reset stage timer]
+    D --> E{Receive sensor event 2?}
+    E -- No --> E
+    E -- Yes --> F[Activate Motor 1]
+    F --> G{Receive sensor event 6?}
+    G -- No --> G
+    G -- Yes --> H[Deactivate Motor 1]
+    H --> I[Select randomized pneumatic channels<br/>pulse outputs]
+    I --> J{Receive sensor event 4<br/>or stage time limit?}
+    J -- No --> I
+    J -- Yes --> K[Switch pneumatic outputs OFF]
+    K --> L{Receive sensor event 4?}
+    L -- No --> L
+    L -- Yes --> M[Activate Motor 2]
+    M --> N{Receive end event 5?}
+    N -- No --> N
+    N -- Yes --> O[Deactivate motor outputs]
+    O --> C
 ```
 
 The firmware also monitors the end event and time limit while waiting between
