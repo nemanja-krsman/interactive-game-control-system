@@ -1,0 +1,399 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F876 ]
+[d frameptr 6 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\rand.c
+[v _srand srand `(v  1 e 1 0 ]
+"12
+[v _rand rand `(i  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"79 D:\Sirmotronic fajlovi\Flick & Play\SuperMario\SuperMarioOUTPUTS.X\main.c
+[v _Setup_Pins Setup_Pins `(v  1 e 1 0 ]
+"113
+[v _Output_low Output_low `(v  1 e 1 0 ]
+"157
+[v _displayConvert displayConvert `(uc  1 e 1 0 ]
+"190
+[v _shiftOut shiftOut `(v  1 e 1 0 ]
+"254
+[v _TMR_ISR TMR_ISR `II(v  1 e 1 0 ]
+"376
+[v _Timer2_Setup Timer2_Setup `(v  1 e 1 0 ]
+"391
+[v _Timer2_Reset Timer2_Reset `(v  1 e 1 0 ]
+"417
+[v _output_v output_v `(v  1 e 1 0 ]
+"459
+[v _main main `(v  1 e 1 0 ]
+"8 D:\Sirmotronic fajlovi\Flick & Play\SuperMario\SuperMarioOUTPUTS.X\UART.c
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+"22
+[v _UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+[v i1_UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+"30
+[v _UART_RxChar UART_RxChar `(uc  1 e 1 0 ]
+"43
+[v _UART_putst UART_putst `(v  1 e 1 0 ]
+[v i1_UART_putst UART_putst `(v  1 e 1 0 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f876.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+[s S143 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"175
+[u S150 . 1 `S143 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES150  1 e 1 @5 ]
+[s S101 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"226
+[u S110 . 1 `S101 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES110  1 e 1 @6 ]
+"270
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S122 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"287
+[u S131 . 1 `S122 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES131  1 e 1 @7 ]
+[s S201 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"373
+[s S210 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S215 . 1 `S201 1 . 1 0 `S210 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES215  1 e 1 @11 ]
+[s S167 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"443
+[u S175 . 1 `S167 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES175  1 e 1 @12 ]
+"608
+[v _TMR2 TMR2 `VEuc  1 e 1 @17 ]
+[s S233 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 TOUTPS 1 0 :4:3 
+]
+"635
+[s S237 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 TOUTPS0 1 0 :1:3 
+`uc 1 TOUTPS1 1 0 :1:4 
+`uc 1 TOUTPS2 1 0 :1:5 
+`uc 1 TOUTPS3 1 0 :1:6 
+]
+[u S245 . 1 `S233 1 . 1 0 `S237 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES245  1 e 1 @18 ]
+"834
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+[s S560 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"864
+[s S569 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S573 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S576 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S579 . 1 `S560 1 . 1 0 `S569 1 . 1 0 `S573 1 . 1 0 `S576 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES579  1 e 1 @24 ]
+"928
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"934
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+[s S281 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1136
+[s S288 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S292 . 1 `S281 1 . 1 0 `S288 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES292  1 e 1 @129 ]
+[s S84 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1200
+[u S91 . 1 `S84 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES91  1 e 1 @133 ]
+[s S42 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1251
+[u S51 . 1 `S42 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES51  1 e 1 @134 ]
+"1295
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+[s S63 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1312
+[u S72 . 1 `S63 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES72  1 e 1 @135 ]
+[s S262 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1372
+[u S270 . 1 `S262 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES270  1 e 1 @140 ]
+"1537
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"1717
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+"1797
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+[s S19 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 . 1 0 :3:4 
+`uc 1 ADFM 1 0 :1:7 
+]
+"1827
+[s S23 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+]
+[u S28 . 1 `S19 1 . 1 0 `S23 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES28  1 e 1 @159 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\rand.c
+[v _randx randx `l  1 s 4 randx ]
+"57 D:\Sirmotronic fajlovi\Flick & Play\SuperMario\SuperMarioOUTPUTS.X\main.c
+[v _Timer2_counter Timer2_counter `ui  1 e 2 0 ]
+"58
+[v _Timer0_counter Timer0_counter `ui  1 e 2 0 ]
+"59
+[v _stotinke stotinke `uc  1 e 1 0 ]
+"60
+[v _sekunde sekunde `uc  1 e 1 0 ]
+"61
+[v _minute minute `uc  1 e 1 0 ]
+"66
+[v _rec_data rec_data `[8]uc  1 e 8 0 ]
+"67
+[v _rec_count rec_count `ui  1 e 2 0 ]
+"68
+[v _number number `uc  1 e 1 0 ]
+"69
+[v _counter counter `uc  1 e 1 0 ]
+"71
+[v _game_over game_over `uc  1 e 1 0 ]
+"72
+[v _time_over time_over `uc  1 e 1 0 ]
+"253
+[v _sekunde_pass sekunde_pass `uc  1 e 1 0 ]
+"459
+[v _main main `(v  1 e 1 0 ]
+{
+"464
+[v main@start_counter start_counter `ui  1 a 2 35 ]
+"461
+[v main@rand_number2 rand_number2 `uc  1 a 1 39 ]
+"460
+[v main@rand_number1 rand_number1 `uc  1 a 1 38 ]
+"466
+[v main@i i `uc  1 a 1 37 ]
+"463
+[v main@old_rand2 old_rand2 `uc  1 a 1 34 ]
+[v main@old_rand1 old_rand1 `uc  1 a 1 33 ]
+"462
+[v main@rand_number3 rand_number3 `uc  1 a 1 32 ]
+"465
+[v main@srand_counter srand_counter `uc  1 a 1 31 ]
+"463
+[v main@old_rand3 old_rand3 `uc  1 a 1 30 ]
+"724
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\rand.c
+[v _srand srand `(v  1 e 1 0 ]
+{
+[v srand@x x `ui  1 p 2 0 ]
+"9
+} 0
+"12
+[v _rand rand `(i  1 e 2 0 ]
+{
+"17
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 9 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"417 D:\Sirmotronic fajlovi\Flick & Play\SuperMario\SuperMarioOUTPUTS.X\main.c
+[v _output_v output_v `(v  1 e 1 0 ]
+{
+[v output_v@datax datax `uc  1 a 1 wreg ]
+[v output_v@datax datax `uc  1 a 1 wreg ]
+[v output_v@value value `uc  1 p 1 0 ]
+[v output_v@datax datax `uc  1 a 1 1 ]
+"454
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 26 ]
+[v ___awmod@counter counter `uc  1 a 1 25 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 20 ]
+[v ___awmod@dividend dividend `i  1 p 2 22 ]
+"35
+} 0
+"43 D:\Sirmotronic fajlovi\Flick & Play\SuperMario\SuperMarioOUTPUTS.X\UART.c
+[v _UART_putst UART_putst `(v  1 e 1 0 ]
+{
+[v UART_putst@str str `*.25DCCuc  1 p 2 1 ]
+"53
+} 0
+"22
+[v _UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+{
+[v UART_TxChar@ch ch `uc  1 a 1 wreg ]
+[v UART_TxChar@ch ch `uc  1 a 1 wreg ]
+[v UART_TxChar@ch ch `uc  1 a 1 0 ]
+"27
+} 0
+"8
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+{
+[v UART_Init@baudRate baudRate `i  1 p 2 0 ]
+"19
+} 0
+"376 D:\Sirmotronic fajlovi\Flick & Play\SuperMario\SuperMarioOUTPUTS.X\main.c
+[v _Timer2_Setup Timer2_Setup `(v  1 e 1 0 ]
+{
+"386
+} 0
+"391
+[v _Timer2_Reset Timer2_Reset `(v  1 e 1 0 ]
+{
+"392
+[v Timer2_Reset@i i `uc  1 a 1 0 ]
+"400
+} 0
+"79
+[v _Setup_Pins Setup_Pins `(v  1 e 1 0 ]
+{
+"108
+} 0
+"113
+[v _Output_low Output_low `(v  1 e 1 0 ]
+{
+[v Output_low@i i `uc  1 a 1 wreg ]
+[v Output_low@i i `uc  1 a 1 wreg ]
+[v Output_low@i i `uc  1 a 1 0 ]
+"150
+} 0
+"254
+[v _TMR_ISR TMR_ISR `II(v  1 e 1 0 ]
+{
+"367
+} 0
+"43 D:\Sirmotronic fajlovi\Flick & Play\SuperMario\SuperMarioOUTPUTS.X\UART.c
+[v i1_UART_putst UART_putst `(v  1 e 1 0 ]
+{
+[v i1UART_putst@str str `*.25DCCuc  1 p 2 1 ]
+"53
+} 0
+"22
+[v i1_UART_TxChar UART_TxChar `(v  1 e 1 0 ]
+{
+[v i1UART_TxChar@ch ch `uc  1 a 1 wreg ]
+[v i1UART_TxChar@ch ch `uc  1 a 1 wreg ]
+[v i1UART_TxChar@ch ch `uc  1 a 1 0 ]
+"27
+} 0
+"30
+[v _UART_RxChar UART_RxChar `(uc  1 e 1 0 ]
+{
+"41
+} 0
