@@ -1,4 +1,4 @@
-# Super Wario — Interactive Game Control System
+# Interactive Game Control System
 
 Super Wario is a timed, interactive physical game. Players progress through
 sensor-triggered stages while custom electronics control motors and pneumatic
