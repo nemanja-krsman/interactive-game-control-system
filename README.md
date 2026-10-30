@@ -160,3 +160,7 @@ embedded projects and may require a compatible MPLAB X setup to rebuild.
 ![Full electronic control units](<doc/Full Electronic ECUs.jpg>)
 
 *The electronic control units assembled for the Super Wario game.*
+
+Images of the fully assembled game are not included due to intellectual
+property restrictions. Please contact me if you would like more information
+about the project.
