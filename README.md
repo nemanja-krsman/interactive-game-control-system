@@ -103,6 +103,12 @@ The display code shifts digit data serially to the display hardware. Timing is
 maintained by the microcontroller timers, while the output firmware also
 enforces a time limit during a game stage.
 
+For details about each firmware unit, see the dedicated guides:
+
+- [Inputs firmware](SuperWarioINPUTS.X/README.md)
+- [Main/timer-display firmware](SuperWarioMAIN/SuperMarioMAIN.X/README.md)
+- [Outputs/game-sequence firmware](SuperWarioOUTPUTS.X/README.md)
+
 ## Repository Contents
 
 - `doc/` — project and electronics photos used in this README.
