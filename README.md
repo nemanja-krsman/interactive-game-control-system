@@ -1,9 +1,8 @@
 # Super Wario — Interactive Game Control System
 
-Super Wario is an interactive, timed game built around custom electronics and
-embedded firmware. Sensors and buttons report player progress to the control
-electronics; the system updates the timer display and operates motors and
-pneumatic mechanisms as the player moves through the game.
+Super Wario is a timed, interactive physical game. Players progress through
+sensor-triggered stages while custom electronics control motors and pneumatic
+mechanisms and track the elapsed time.
 
 I designed and built the electronics and software for this project myself,
 including the control boards, PCB designs, firmware, and system integration.
@@ -36,8 +35,7 @@ The output-controller firmware describes this game sequence:
 | `5` | End button | End the round |
 
 The output firmware also includes a timed stage/pass limit. The event IDs and
-actions above describe the current firmware; the exact physical placement and
-player-facing rules are best shown in a photo or diagram of the completed game.
+actions above describe the current firmware.
 
 ## Hardware Overview
 
@@ -157,20 +155,8 @@ For details about each firmware unit, see the dedicated guides:
 Compiler used for the firmware is XC8 V1.38. The checked-in projects are legacy
 embedded projects and may require a compatible MPLAB X setup to rebuild.
 
-## Photos and Screenshots to Add
+## Electronic Control Units
 
-The existing images document the electronics and pneumatic mechanism. For a
-clearer project presentation on GitHub, I recommend adding:
+![Full electronic control units](<doc/Full Electronic ECUs.jpg>)
 
-- A clean, well-lit overall photo of the **completed game**, ideally from the
-  player's point of view.
-- Close-up photos of each finished PCB (main, input, pneumatic, motor, and
-  power boards), preferably showing both component and solder sides.
-- A close-up of the display while the timer is running.
-- A labeled system/block diagram showing sensors, controllers, driver boards,
-  power supplies, motors, and pneumatic equipment.
-- A short video or GIF showing a complete game round and the mechanisms
-  responding to sensor events.
-
-These additions would show the finished player experience and make the
-electronics easier to identify than the current bench-assembly photos.
+*The electronic control units assembled for the Super Wario game.*
