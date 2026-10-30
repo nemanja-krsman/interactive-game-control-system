@@ -103,6 +103,25 @@ The display code shifts digit data serially to the display hardware. Timing is
 maintained by the microcontroller timers, while the output firmware also
 enforces a time limit during a game stage.
 
+### System algorithm
+
+```text
+Initialize input, timer/display, and output controllers
+Repeat:
+    Wait for the start-button event (1)
+    Reset and start the elapsed-time display
+    Wait for sensor 1 (2), then activate Motor 1
+    Wait for sensor 2 (6), then run randomized pneumatic outputs
+        If the stage time limit expires, switch the pneumatic outputs off
+    Wait for sensor 3 (4), then activate Motor 2
+    Wait for the end-button event (5), then finish the round
+    Stop the timer and switch controlled outputs off
+```
+
+This is the intended high-level flow represented by the current firmware.
+Individual controllers handle their own part of the sequence; see their guides
+for implementation details.
+
 For details about each firmware unit, see the dedicated guides:
 
 - [Inputs firmware](SuperWarioINPUTS.X/README.md)
@@ -123,9 +142,8 @@ For details about each firmware unit, see the dedicated guides:
 - `SuperWarioINPUTS_Proteus/`, `SuperWarioOUTPUTS_Proteus/`, and
   `SuperWarioMAIN/SuperMarioMAIN - Proteus/` — Proteus simulation projects.
 
-The firmware project files reference MPLAB XC8 v1.38. The checked-in projects
-are legacy embedded projects and may require that toolchain and compatible
-MPLAB X setup to rebuild.
+Compiler used for the firmware is XC8 V1.38. The checked-in projects are legacy
+embedded projects and may require a compatible MPLAB X setup to rebuild.
 
 ## Photos and Screenshots to Add
 

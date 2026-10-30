@@ -33,11 +33,27 @@ event and the line feed is not needed for parsing.
 The output-controller firmware also consumes game events. See its
 [firmware guide](../../SuperWarioOUTPUTS.X/README.md) for the game sequence.
 
+## Algorithm
+
+```text
+Initialize UART and display interface
+Keep the timer stopped and show the current time
+Repeat:
+    Wait for event 1
+    Reset elapsed-time counters and start the timer
+    While the timer runs:
+        Update the display from the timer counters
+        When event 5 arrives, stop the timer
+```
+
+Timer interrupts maintain the time counters and refresh the displayed digits.
+The main loop waits for the start and end events received over UART.
+
 ## Build
 
 Open this directory's MPLAB X project and build the production configuration
-with a compatible Microchip XC8 toolchain. The checked-in project metadata
-references XC8 v1.38. Generated firmware artifacts are under `dist/`.
+with a compatible MPLAB X setup. Compiler used is XC8 V1.38. Generated firmware
+artifacts are under `dist/`.
 
 ## Related documentation
 

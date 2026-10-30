@@ -19,6 +19,24 @@ inputs 1–6 are configured and actively scanned in the current source. Input
 events are transmitted as their channel numbers; their game meanings depend on
 the connected hardware and the receiving firmware.
 
+## Algorithm
+
+```text
+Configure inputs 1–6 and initialize UART
+Wait briefly for startup
+Repeat:
+    Scan each enabled input
+    For each input that is active low and was not already held:
+        Mark the input event
+        Wait 200 ms
+    Send every marked input number as ASCII followed by CR/LF
+    Clear the event buffer
+```
+
+Per-input flags prevent a held button or sensor from sending the same event on
+every scan. The event is eligible to be sent again after the input returns
+inactive and is activated again.
+
 ## Input pins
 
 | Input | PIC16F628A pin |
@@ -38,9 +56,9 @@ numbering and signal reference before wiring.
 ## Build
 
 Open this directory's MPLAB X project and build the production configuration
-with a compatible Microchip XC8 toolchain. The checked-in project metadata
-references XC8 v1.38. The generated firmware artifacts are under `dist/`;
-they are build outputs rather than source.
+with a compatible MPLAB X setup. Compiler used is XC8 V1.38. The generated
+firmware artifacts are under `dist/`; they are build outputs rather than
+source.
 
 ## Related documentation
 

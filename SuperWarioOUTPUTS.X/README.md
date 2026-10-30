@@ -19,6 +19,27 @@ electronics. The source is in [`main.c`](main.c), with UART support in
 The event sequence and meanings are based on the current firmware; the
 physical sensor assignment is installation-specific.
 
+## Algorithm
+
+```text
+Initialize outputs to OFF and initialize UART and timer
+Repeat:
+    Wait for start event 1; reset the stage timer
+    Wait for sensor event 2; activate Motor 1
+    Wait for sensor event 6; deactivate Motor 1
+    Until sensor event 4 or the stage time limit:
+        Select pneumatic output channels
+        Pulse the selected outputs, then leave them OFF between pulses
+    Ensure pneumatic outputs are OFF
+    Wait for sensor event 4; activate Motor 2
+    Wait for end event 5
+    Deactivate motor outputs and finish the round
+```
+
+The firmware also monitors the end event and time limit while waiting between
+stages. The algorithm is a functional summary; the source code defines the
+exact timing and output transitions.
+
 ## Output channels
 
 | Firmware output | PIC16F876 pin | Intended use in current source |
@@ -43,8 +64,8 @@ Received event numbers are ASCII digits terminated by carriage return.
 ## Build
 
 Open this directory's MPLAB X project and build the production configuration
-with a compatible Microchip XC8 toolchain. The checked-in project metadata
-references XC8 v1.38. Generated firmware artifacts are under `dist/`.
+with a compatible MPLAB X setup. Compiler used is XC8 V1.38. Generated firmware
+artifacts are under `dist/`.
 
 ## Related documentation
 
