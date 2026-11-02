@@ -53,15 +53,13 @@ inactive and is activated again.
 
 UART uses RB1 for RX and RB2 for TX. Input signals are active low, consistent
 with the pull-up input arrangement documented in the
-[hardware manual](../Manual/Manual.pdf). Confirm the board's connector
-numbering and signal reference before wiring.
+[hardware manual](../Manual/Manual.pdf). 
 
 ## Build
 
 Open this directory's MPLAB X project and build the production configuration
 with a compatible MPLAB X setup. Compiler used is XC8 V1.38. The generated
-firmware artifacts are under `dist/`; they are build outputs rather than
-source.
+firmware artifacts are under `dist/`.
 
 ## Related documentation
 
