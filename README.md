@@ -48,15 +48,11 @@ parts of the game:
 | Input controller | Scans buttons and sensors and reports input events to the other controllers |
 | Pneumatic board | Provides eight input and eight output channels for controlling pneumatic equipment |
 | Motor board | Uses a MOSFET to switch the motor speed-controller input; it does not directly drive the DC motor |
-| Power board | Uses a relay to switch a load; the manual specifies a maximum current of 10 A |
+| Power board | Uses a relay to switch a load |
 | Display modules | Serial-connected two-digit modules used to show elapsed game time |
-| Power supplies | The manual documents 12 V / 30 A and 5 V / 30 A supplies; the main board accepts 12–24 V input |
-| Sensors and buttons | Active-low inputs; the documented installation uses two sensors and two buttons |
+| Power supplies | Two power supplies: 12 V / 30 A and 5 V / 30 A; the main board accepts 12–24 V input |
+| Sensors and buttons | Active-low inputs |
 
-The current input firmware actively scans six input channels. The manual
-describes two sensors and two buttons in the documented installation, so the
-available channels and the installed game configuration are not necessarily
-the same.
 
 ![Main control board assembly](<doc/ECU_1 - Main Board.jpg>)
 
@@ -75,9 +71,6 @@ motor, pneumatic, and power boards. For full connector descriptions and wiring
 guidance, see the [PDF hardware manual](<Manual/Manual.pdf>) or the
 [editable Word manual](<Manual/Manual.docx>).
 
-> **Electrical safety:** The documented power board can switch AC or DC loads.
-> Use suitable enclosures, isolation, wiring, and protection for the actual
-> load and supply. Do not handle energized mains wiring.
 
 ## Firmware Overview
 
